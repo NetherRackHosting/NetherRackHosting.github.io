@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <title>NetherRack Hosting</title>
+    <script>
+      var keyHandler = function (event) {
+var pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+var current = 0;
+
+	// If the key isn't in the pattern, or isn't the current key in the pattern, reset
+	if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+    
+		current = 0;
+		return;
+	}
+
+	// Update how much of the pattern is complete
+	current++;
+
+	// If complete, alert and reset
+	if (pattern.length === current) {
+		current = 0;
+		window.alert('You found a Konami Easter Egg:)');
+	}
+
+};
+    </script>
+
+    
+  </head>
+
+  <div name="Header" id="HDiv" style="Active">
+    <h1>Welcome to NetherRack Hosting? Get <a href="/servers">Started!</a>a></h1>
+</html>
